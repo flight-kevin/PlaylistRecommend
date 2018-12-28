@@ -85,6 +85,7 @@ for NewPlaylist in NewPlaylistTable:
 #     member.node_id, member.level_id, member.parent_node_id, member.node_name, member.view_count))
 
 # Input playlist to test the recommendation output
+
 TestPlaylist = ["C", "D"]
 gv_parent_node_id = 0
 gv_level_id = 1
