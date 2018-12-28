@@ -44,6 +44,7 @@ class PlaylistTree():
                 result = 1
         return result
 
+# Create sample playlist tree
 ary_PlaylistTree = PlaylistTree()
 NewPlaylistTable = [["C", "A", "B"]
     , ["C", "D", "A"]
@@ -83,6 +84,7 @@ for NewPlaylist in NewPlaylistTable:
 #     print("%2d\t%2d\t%2d\t%s\t%3d" % (
 #     member.node_id, member.level_id, member.parent_node_id, member.node_name, member.view_count))
 
+# Input playlist to test the recommendation output
 TestPlaylist = ["C", "D"]
 gv_parent_node_id = 0
 gv_level_id = 1
