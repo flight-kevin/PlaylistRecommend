@@ -3,7 +3,7 @@
 
 # import mysql.connector
 import playlist
-
+import os
 
 # Create sample playlist tree
 def main():
@@ -49,10 +49,10 @@ def main():
                     ary_playlist_tree.add_playlist_node(playlist.PlaylistNode(gv_node_id, gv_level_id, gv_node_name, 1, gv_parent_node_id))
                     gv_parent_node_id = gv_node_id
 
-        # print("%s\t%s\t%s\t%s\t%s" % ("node_id", "level_id", "parent_node_id", "node_name", "view_count"))
-        # for member in ary_playlist_tree.playlist:
-        #     print("%2d\t%2d\t%2d\t%s\t%3d" % (
-        #     member.node_id, member.level_id, member.parent_node_id, member.node_name, member.view_count))
+        print("%s\t%s\t%s\t%s\t%s" % ("node_id", "level_id", "parent_node_id", "node_name", "view_count"))
+        for member in ary_playlist_tree.playlist:
+            print("%2d\t%2d\t%2d\t%s\t%3d" % (
+            member.node_id, member.level_id, member.parent_node_id, member.node_name, member.view_count))
 
         # Input playlist to test the recommendation output
 
@@ -79,8 +79,8 @@ def main():
         # cursor.close
         # conn.close
         print("\n")
-        print("Connection closed in finally\n")
-        print("program main.py ends.\n")
+        # print("Connection closed in finally")
+        print("program " + os.path.basename(__file__) + " ends.")
 
 
 if __name__ == "__main__":
